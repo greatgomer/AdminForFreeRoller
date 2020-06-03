@@ -1,61 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TableRow
+    <EditText
+        android:id="@+id/editText_lat"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_marginTop="224dp"
+        android:autofillHints="no"
+        android:hint="@string/add_lat"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="146dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
 
-        <EditText
-            android:id="@+id/editText_lat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/add_lat"
-            android:inputType="numberDecimal"/>
-
-        <EditText
-            android:id="@+id/editText_lon"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/add_lon"
-            android:inputType="numberDecimal"/>
-    </TableRow>
-
-    <TableRow
+    <EditText
+        android:id="@+id/editText_lon"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:autofillHints="no"
+        android:hint="@string/add_lon"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_lat"
+        tools:layout_conversion_absoluteHeight="146dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
 
-        <EditText
-            android:id="@+id/editText_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/add_name" />
-
-        <EditText
-            android:id="@+id/editText_opt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/add_opt" />
-    </TableRow>
-
-    <TableRow
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:autofillHints="no"
+        android:hint="@string/add_name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_lon"
+        tools:layout_conversion_absoluteHeight="146dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
 
-        <Button
-            android:id="@+id/buttonSetData"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/button_add_data" />
-    </TableRow>
-    <TableRow></TableRow>
-</TableLayout>
+    <EditText
+        android:id="@+id/editText_opt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="no"
+        android:hint="@string/add_opt"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_name"
+        tools:layout_conversion_absoluteHeight="146dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
+
+    <Button
+        android:id="@+id/buttonSetData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_add_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_opt"
+        tools:layout_conversion_absoluteHeight="149dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
