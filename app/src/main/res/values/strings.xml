@@ -5,4 +5,5 @@
     <string name="add_lon">Add lon</string>
     <string name="add_name">Add name</string>
     <string name="add_opt">Add options</string>
+    <string name="check_add">Заполните все поля</string>
 </resources>
