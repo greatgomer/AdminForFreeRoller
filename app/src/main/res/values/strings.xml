@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AdminForFreeRoller</string>
+    <string name="button_add_data">Add Data</string>
+    <string name="add_lat">Add lat</string>
+    <string name="add_lon">Add lon</string>
+    <string name="add_name">Add name</string>
+    <string name="add_opt">Add options</string>
+</resources>
