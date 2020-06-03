@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
             if(!lat.isEmpty() && !lon.isEmpty() && !name.isEmpty() && !opt.isEmpty()){
                 val addData = AddData(id, lat, lon, name, opt)
                 database.push().setValue(addData)
+                Toast.makeText(this, R.string.check_is_successfully, Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(this, R.string.check_add, Toast.LENGTH_SHORT).show()
             }
