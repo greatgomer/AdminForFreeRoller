@@ -62,14 +62,26 @@
         tools:layout_conversion_absoluteHeight="146dp"
         tools:layout_conversion_absoluteWidth="411dp" />
 
+    <EditText
+        android:id="@+id/editText_city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="no"
+        android:hint="@string/add_city"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_opt" />
+
     <Button
         android:id="@+id/buttonSetData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_add_data"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_opt"
+        app:layout_constraintTop_toBottomOf="@+id/editText_city"
         tools:layout_conversion_absoluteHeight="149dp"
         tools:layout_conversion_absoluteWidth="411dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

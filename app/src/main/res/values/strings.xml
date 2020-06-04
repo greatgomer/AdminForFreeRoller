@@ -5,6 +5,7 @@
     <string name="add_lon">Add lon</string>
     <string name="add_name">Add name</string>
     <string name="add_opt">Add options</string>
+    <string name="add_city">Add city in english</string>
     <string name="check_is_successfully">Данные добавлены</string>
     <string name="check_add">Заполните все поля</string>
 </resources>

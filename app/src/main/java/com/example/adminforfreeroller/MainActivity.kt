@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         val editLon = findViewById<EditText>(R.id.editText_lon)
         val editName = findViewById<EditText>(R.id.editText_name)
         val editOpt = findViewById<EditText>(R.id.editText_opt)
+        val editCity = findViewById<EditText>(R.id.editText_city)
+
         database = FirebaseDatabase.getInstance().getReference(places_name)
 
         sentData.setOnClickListener {
@@ -33,7 +35,9 @@ class MainActivity : AppCompatActivity() {
             var lon = editLon.text.toString()
             var name = editName.text.toString()
             var opt = editOpt.text.toString()
-            if(!lat.isEmpty() && !lon.isEmpty() && !name.isEmpty() && !opt.isEmpty()){
+            var city = editCity.text.toString()
+            database = FirebaseDatabase.getInstance().getReference(places_name).child(city)
+            if(!lat.isEmpty() && !lon.isEmpty() && !name.isEmpty() && !opt.isEmpty() && !city.isEmpty()){
                 val addData = AddData(id, lat, lon, name, opt)
                 database.push().setValue(addData)
                 Toast.makeText(this, R.string.check_is_successfully, Toast.LENGTH_SHORT).show()
