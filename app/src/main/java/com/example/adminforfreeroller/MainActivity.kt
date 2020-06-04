@@ -1,5 +1,6 @@
 package com.example.adminforfreeroller
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,8 +9,6 @@ import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -45,5 +44,10 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, R.string.check_add, Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    fun onButtonClick(view: View) {
+        val intent = Intent(this, AddTrains::class.java)
+        startActivity(intent)
     }
 }

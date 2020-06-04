@@ -8,4 +8,5 @@
     <string name="add_city">Add city in english</string>
     <string name="check_is_successfully">Данные добавлены</string>
     <string name="check_add">Заполните все поля</string>
+    <string name="button_second_activity">Trains</string>
 </resources>

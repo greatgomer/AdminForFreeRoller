@@ -75,7 +75,7 @@
 
     <Button
         android:id="@+id/buttonSetData"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/button_add_data"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,4 +84,14 @@
         app:layout_constraintTop_toBottomOf="@+id/editText_city"
         tools:layout_conversion_absoluteHeight="149dp"
         tools:layout_conversion_absoluteWidth="411dp" />
+
+    <Button
+        android:onClick="onButtonClick"
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_second_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSetData" />
 </androidx.constraintlayout.widget.ConstraintLayout>
