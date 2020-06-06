@@ -4,32 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddTrains">
-
-    <EditText
-        android:id="@+id/editText_trains_type"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:autofillHints="no"
-        android:hint="@string/trains_type"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".TrainsActivity">
 
     <EditText
         android:id="@+id/editText_trains_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:autofillHints="no"
         android:hint="@string/trains_name"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_trains_type"
-        android:autofillHints="no"
-        android:inputType="text" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_style" />
 
     <EditText
         android:id="@+id/editText_picture_link"
@@ -61,6 +48,7 @@
         android:hint="@string/train_description"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_complexity" />
 
@@ -76,7 +64,6 @@
         app:layout_constraintTop_toBottomOf="@+id/editText_train_description" />
 
     <Button
-        android:onClick="addTrain"
         android:id="@+id/button_add_train"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -94,4 +81,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_add_train" />
+
+    <Spinner
+        android:id="@+id/spinner_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

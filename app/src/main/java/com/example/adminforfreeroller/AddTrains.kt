@@ -1,21 +1,21 @@
 package com.example.adminforfreeroller
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.view.View
+class AddTrains {
+    var id = ""
+    var name = ""
+    var link_picture = ""
+    var complexity = ""
+    var description = ""
+    var link_video = ""
 
-class AddTrains : AppCompatActivity() {
+    constructor()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_trains)
+    constructor(id: String, name: String, link_picture: String, complexity: String, description: String, link_video: String) {
+        this.id = id
+        this.name = name
+        this.link_picture = link_picture
+        this.complexity = complexity
+        this.description = description
+        this.link_video = link_video
     }
-
-    fun onButtonClickMarkers(view: View) {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
-
-    fun addTrain(view: View) {}
 }

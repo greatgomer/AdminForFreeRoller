@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onButtonClick(view: View) {
-        val intent = Intent(this, AddTrains::class.java)
+        val intent = Intent(this, TrainsActivity::class.java)
         startActivity(intent)
     }
 }
