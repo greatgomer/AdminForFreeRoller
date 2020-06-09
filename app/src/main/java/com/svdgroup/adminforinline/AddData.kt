@@ -1,4 +1,4 @@
-package com.example.adminforfreeroller
+package com.svdgroup.adminforinline
 
 class AddData {
     var id = ""

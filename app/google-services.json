@@ -1,42 +1,34 @@
 {
   "project_info": {
-    "project_number": "601006052522",
-    "firebase_url": "https://freeroller-b34c8.firebaseio.com",
-    "project_id": "freeroller-b34c8",
-    "storage_bucket": "freeroller-b34c8.appspot.com"
+    "project_number": "728669819068",
+    "firebase_url": "https://inline-279813.firebaseio.com",
+    "project_id": "inline-279813",
+    "storage_bucket": "inline-279813.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:601006052522:android:868d080b17ff011785ecd3",
+        "mobilesdk_app_id": "1:728669819068:android:4dd9f964f1ac4868f8c0b9",
         "android_client_info": {
-          "package_name": "com.example.adminforfreeroller"
+          "package_name": "com.svdg.adminforinline"
         }
       },
       "oauth_client": [
         {
-          "client_id": "601006052522-ubdsqhesjtjfasuvuvtk8s7g7ehbdipo.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.adminforfreeroller",
-            "certificate_hash": "dbf069b367a2e800c9b795a50a36e16fcb42957a"
-          }
-        },
-        {
-          "client_id": "601006052522-3s07mlbu6b12n8tijusv0lg9dhqqbhl8.apps.googleusercontent.com",
+          "client_id": "728669819068-5lod1hotjldjmt7cncb890pplispa247.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD9QnnasW-nd4OxVMT-pCuGqG51jPPi9wA"
+          "current_key": "AIzaSyBR9io_ui_YCyuM8DbYD8iS4tSqzfLlgY8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "601006052522-3s07mlbu6b12n8tijusv0lg9dhqqbhl8.apps.googleusercontent.com",
+              "client_id": "728669819068-5lod1hotjldjmt7cncb890pplispa247.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -45,35 +37,27 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:601006052522:android:f2a08f165f96effc85ecd3",
+        "mobilesdk_app_id": "1:728669819068:android:6f1c9193afbc856af8c0b9",
         "android_client_info": {
-          "package_name": "com.example.freerollerclub"
+          "package_name": "com.svdgroup.adminforinline"
         }
       },
       "oauth_client": [
         {
-          "client_id": "601006052522-ns149o601eqpun0p20ld4dcj7dkg0jqd.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.freerollerclub",
-            "certificate_hash": "dbf069b367a2e800c9b795a50a36e16fcb42957a"
-          }
-        },
-        {
-          "client_id": "601006052522-3s07mlbu6b12n8tijusv0lg9dhqqbhl8.apps.googleusercontent.com",
+          "client_id": "728669819068-5lod1hotjldjmt7cncb890pplispa247.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD9QnnasW-nd4OxVMT-pCuGqG51jPPi9wA"
+          "current_key": "AIzaSyBR9io_ui_YCyuM8DbYD8iS4tSqzfLlgY8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "601006052522-3s07mlbu6b12n8tijusv0lg9dhqqbhl8.apps.googleusercontent.com",
+              "client_id": "728669819068-5lod1hotjldjmt7cncb890pplispa247.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

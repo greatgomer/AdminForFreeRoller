@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AdminForFreeRoller</string>
+    <string name="app_name">AdminForInLine</string>
     <!-- Strings of activity_main -->
     <string name="button_add_data">Add Data</string>
     <string name="add_lat">Add lat</string>

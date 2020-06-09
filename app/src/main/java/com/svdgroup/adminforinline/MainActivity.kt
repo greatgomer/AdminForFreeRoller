@@ -1,4 +1,4 @@
-package com.example.adminforfreeroller
+package com.svdgroup.adminforinline
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package com.example.adminforfreeroller
+package com.svdgroup.adminforinline
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -32,12 +32,12 @@ class TrainsActivity : AppCompatActivity() {
 
         val aa = ArrayAdapter(this, android.R.layout.simple_spinner_item, style_array)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinner!!.setAdapter(aa)
+        spinner!!.adapter = aa
 
 
-        spinner?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-                override fun onNothingSelected(parent: AdapterView<*>?) {
-                }
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 style = style_array[position]
@@ -63,7 +63,7 @@ class TrainsActivity : AppCompatActivity() {
             }
         }
 
-        }
+    }
 
     fun onButtonClickMarkers(view: View) {
         val intent = Intent(this, MainActivity::class.java)

@@ -1,2 +1,2 @@
-rootProject.name='AdminForFreeRoller'
 include ':app'
+rootProject.name = "AdminForInLine"
