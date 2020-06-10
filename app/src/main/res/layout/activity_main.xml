@@ -8,18 +8,26 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <Spinner
+        android:id="@+id/spinner_city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/editText_lat"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="224dp"
         android:autofillHints="no"
         android:hint="@string/add_lat"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_city"
         tools:layout_conversion_absoluteHeight="146dp"
         tools:layout_conversion_absoluteWidth="411dp" />
 
@@ -62,17 +70,6 @@
         tools:layout_conversion_absoluteHeight="146dp"
         tools:layout_conversion_absoluteWidth="411dp" />
 
-    <EditText
-        android:id="@+id/editText_city"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:autofillHints="no"
-        android:hint="@string/add_city"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_opt" />
-
     <Button
         android:id="@+id/buttonSetData"
         android:layout_width="0dp"
@@ -81,7 +78,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_city"
+        app:layout_constraintTop_toBottomOf="@+id/editText_opt"
         tools:layout_conversion_absoluteHeight="149dp"
         tools:layout_conversion_absoluteWidth="411dp" />
 

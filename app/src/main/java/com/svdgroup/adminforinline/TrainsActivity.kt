@@ -47,14 +47,14 @@ class TrainsActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance().getReference(trains_name)
 
         sentTrain.setOnClickListener {
-            var id = database.getKey().toString()
-            var name = editName.text.toString()
-            var picture = editPicture.text.toString()
-            var complexity = editComplexity.text.toString()
-            var description = editDescription.text.toString()
-            var video = editVideo.text.toString()
+            val id = database.key.toString()
+            val name = editName.text.toString()
+            val picture = editPicture.text.toString()
+            val complexity = editComplexity.text.toString()
+            val description = editDescription.text.toString()
+            val video = editVideo.text.toString()
             database = FirebaseDatabase.getInstance().getReference(trains_name).child(style)
-            if(!style.isEmpty() && !name.isEmpty() && !picture.isEmpty() && !complexity.isEmpty() && !description.isEmpty() && !video.isEmpty()){
+            if(style.isNotEmpty() && name.isNotEmpty() && picture.isNotEmpty() && complexity.isNotEmpty() && description.isNotEmpty() && video.isNotEmpty()){
                 val addTrain = AddTrains(id, name, picture, complexity, description, video)
                 database.push().setValue(addTrain)
                 Toast.makeText(this, R.string.check_is_successfully, Toast.LENGTH_SHORT).show()
