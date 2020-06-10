@@ -2,78 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TrainsActivity">
-
-    <EditText
-        android:id="@+id/editText_trains_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:autofillHints="no"
-        android:hint="@string/trains_name"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_style" />
-
-    <EditText
-        android:id="@+id/editText_picture_link"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:autofillHints="no"
-        android:hint="@string/picture_link"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_trains_name" />
-
-    <EditText
-        android:id="@+id/editText_complexity"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:autofillHints="no"
-        android:hint="@string/complexity"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_picture_link" />
-
-    <EditText
-        android:id="@+id/editText_train_description"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:autofillHints="no"
-        android:hint="@string/train_description"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_complexity" />
-
-    <EditText
-        android:id="@+id/editText_video_link"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:autofillHints="no"
-        android:hint="@string/video_link"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_train_description" />
-
-    <Button
-        android:id="@+id/button_add_train"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/button_add_data"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_video_link" />
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <Spinner
-        android:id="@+id/spinner_style"
+        android:id="@+id/spinner_city"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="184dp"
@@ -81,4 +17,69 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_lat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="no"
+        android:hint="@string/add_lat"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_city"
+        tools:layout_conversion_absoluteHeight="146dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
+
+    <EditText
+        android:id="@+id/editText_lon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="no"
+        android:hint="@string/add_lon"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_lat"
+        tools:layout_conversion_absoluteHeight="146dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
+
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="no"
+        android:hint="@string/add_name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_lon"
+        tools:layout_conversion_absoluteHeight="146dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
+
+    <EditText
+        android:id="@+id/editText_opt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="no"
+        android:hint="@string/add_opt"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_name"
+        tools:layout_conversion_absoluteHeight="146dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
+
+    <Button
+        android:id="@+id/buttonSetData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_add_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_opt"
+        tools:layout_conversion_absoluteHeight="149dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
