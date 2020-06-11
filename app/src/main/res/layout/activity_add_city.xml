@@ -7,17 +7,28 @@
     tools:context=".AddCityActivity">
 
     <EditText
-        android:id="@+id/editTextCityName"
+        android:id="@+id/editTextCityNameEn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="276dp"
+        android:layout_marginTop="252dp"
         android:autofillHints="no"
-        android:hint="@string/add_city"
+        android:hint="@string/button_name_en"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCityNameRu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="no"
+        android:hint="@string/button_name_ru"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCityNameEn" />
 
     <Button
         android:id="@+id/buttonAddCity"
@@ -27,5 +38,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCityName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCityNameRu" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,13 +1,14 @@
 package com.svdgroup.adminforinline
 
 class AddCity {
-    var id = ""
-    var city = ""
+    var name_en = ""
+    var name_ru = ""
+
 
     constructor()
 
-    constructor(id: String, city: String) {
-        this.id = id
-        this.city = city
+    constructor(name_en: String, name_ru: String) {
+        this.name_en = name_en
+        this.name_ru = name_ru
     }
 }

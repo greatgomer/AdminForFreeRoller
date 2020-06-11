@@ -13,8 +13,6 @@ class AddCityActivity : AppCompatActivity() {
 
     private lateinit var database: DatabaseReference
     private var cities = "Cities"
-    var city = ""
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,12 +21,20 @@ class AddCityActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         val sentData = findViewById<Button>(R.id.buttonAddCity)
-        val editCity = findViewById<EditText>(R.id.editTextCityName)
+        val editCityNameEn = findViewById<EditText>(R.id.editTextCityNameEn)
+        val editCityNameRu = findViewById<EditText>(R.id.editTextCityNameRu)
 
         sentData.setOnClickListener {
-            val city = editCity.text.toString()
+            val nameEn = editCityNameEn.text.toString()
+            val nameRu = editCityNameRu.text.toString()
             database = AppDatabase.getDatabase()!!.getReference(cities)
-            database.push().setValue(city)
+            if(nameEn.isNotEmpty() && nameRu.isNotEmpty()){
+                val addNames = AddCity(nameEn, nameRu)
+                database.push().setValue(addNames)
+                Toast.makeText(this, R.string.check_is_successfully, Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(this, R.string.check_add, Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
