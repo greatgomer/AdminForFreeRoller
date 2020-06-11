@@ -2,42 +2,30 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tableLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".AddCityActivity">
 
-    <Button
-        android:id="@+id/button_add_marker"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:onClick="add_marker"
-        android:text="@string/markers"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_add_city" />
-
-    <Button
-        android:onClick="add_train"
-        android:id="@+id/button_add_train"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/button_second_activity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_add_marker" />
-
-    <Button
-        android:onClick="add_city"
-        android:id="@+id/button_add_city"
+    <EditText
+        android:id="@+id/editTextCityName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="276dp"
-        android:text="@string/button_add_city"
+        android:autofillHints="no"
+        android:hint="@string/add_city"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAddCity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_add_city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCityName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

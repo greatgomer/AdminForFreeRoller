@@ -10,6 +10,7 @@
     <string name="check_is_successfully">Данные добавлены</string>
     <string name="check_add">Заполните все поля</string>
     <string name="button_second_activity">Добавить тренировку</string>
+    <string name="button_add_city">Добавить город</string>
     <!-- Strings of activity_add_trains -->
     <string name="trains_type">Add type of trains</string>
     <string name="trains_name">Add name of trains</string>

@@ -26,4 +26,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, TrainsActivity::class.java)
         startActivity(intent)
     }
+
+    fun add_city(view: View) {
+        val intent = Intent(this, AddCityActivity::class.java)
+        startActivity(intent)
+    }
 }
