@@ -47,7 +47,7 @@ class TrainsActivity : AppCompatActivity() {
             }
         }
 
-        database = FirebaseDatabase.getInstance().getReference(trains_name)
+        database = AppDatabase.getDatabase()!!.getReference(trains_name)
 
         sentTrain.setOnClickListener {
             val id = database.key.toString()
@@ -56,7 +56,7 @@ class TrainsActivity : AppCompatActivity() {
             val complexity = editComplexity.text.toString()
             val description = editDescription.text.toString()
             val video = editVideo.text.toString()
-            database = FirebaseDatabase.getInstance().getReference(trains_name).child(style)
+            database = AppDatabase.getDatabase()!!.getReference(trains_name).child(style)
             if(style.isNotEmpty() && name.isNotEmpty() && picture.isNotEmpty() && complexity.isNotEmpty() && description.isNotEmpty() && video.isNotEmpty()){
                 val addTrain = AddTrains(id, name, picture, complexity, description, video)
                 database.push().setValue(addTrain)

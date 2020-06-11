@@ -46,7 +46,7 @@ class MarkersActivity : AppCompatActivity() {
             }
         }
 
-        database = FirebaseDatabase.getInstance().getReference(places_name)
+        database = AppDatabase.getDatabase()!!.getReference(places_name)
 
         sentData.setOnClickListener {
             val id = database.key.toString()
@@ -54,7 +54,7 @@ class MarkersActivity : AppCompatActivity() {
             val lon = editLon.text.toString()
             val name = editName.text.toString()
             val opt = editOpt.text.toString()
-            database = FirebaseDatabase.getInstance().getReference(places_name).child(city)
+            database = AppDatabase.getDatabase()!!.getReference(places_name).child(city)
             if(lat.isNotEmpty() && lon.isNotEmpty() && name.isNotEmpty() && opt.isNotEmpty() && city.isNotEmpty()){
                 val addData = AddData(id, lat, lon, name, opt)
                 database.push().setValue(addData)
