@@ -7,7 +7,6 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_markers.*
 
 class MarkersActivity : AppCompatActivity() {
@@ -24,7 +23,7 @@ class MarkersActivity : AppCompatActivity() {
 
         var spinner: Spinner? = null
         val sentData = findViewById<Button>(R.id.buttonSetData)
-        val editLat = findViewById<EditText>(R.id.editText_lat)
+        val editLat = findViewById<EditText>(R.id.editText_group)
         val editLon = findViewById<EditText>(R.id.editText_lon)
         val editName = findViewById<EditText>(R.id.editText_name)
         val editOpt = findViewById<EditText>(R.id.editText_opt)

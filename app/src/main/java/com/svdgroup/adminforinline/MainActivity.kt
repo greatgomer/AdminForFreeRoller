@@ -1,8 +1,10 @@
 package com.svdgroup.adminforinline
 
+import android.content.ContentValues
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.*
 import com.google.firebase.database.DatabaseReference
@@ -14,7 +16,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        CitiesList().getNames()
+
         setContentView(R.layout.activity_main)
+
 
     }
 
@@ -29,6 +35,11 @@ class MainActivity : AppCompatActivity() {
 
     fun add_city(view: View) {
         val intent = Intent(this, AddCityActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun add_group(view: View) {
+        val intent = Intent(this, AddGroupActivity::class.java)
         startActivity(intent)
     }
 }

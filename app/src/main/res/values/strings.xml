@@ -7,12 +7,14 @@
     <string name="add_name">Add name</string>
     <string name="add_opt">Add options</string>
     <string name="add_city">Add city in english</string>
+    <string name="add_group">Добавить ссылку на группу</string>
     <string name="check_is_successfully">Данные добавлены</string>
     <string name="check_add">Заполните все поля</string>
     <string name="button_second_activity">Добавить тренировку</string>
     <string name="button_name_en">Название города на английском</string>
     <string name="button_name_ru">Название города на русском</string>
     <string name="button_add_city">Добавить город</string>
+    <string name="button_add_group">Добавить группу</string>
     <!-- Strings of activity_add_trains -->
     <string name="trains_type">Add type of trains</string>
     <string name="trains_name">Add name of trains</string>

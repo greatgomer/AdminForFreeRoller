@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText_lat"
+        android:id="@+id/editText_group"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:autofillHints="no"
@@ -40,7 +40,7 @@
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_lat"
+        app:layout_constraintTop_toBottomOf="@+id/editText_group"
         tools:layout_conversion_absoluteHeight="146dp"
         tools:layout_conversion_absoluteWidth="411dp" />
 
