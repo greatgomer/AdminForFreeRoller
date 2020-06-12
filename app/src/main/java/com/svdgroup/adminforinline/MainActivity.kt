@@ -17,11 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        CitiesList().getNames()
-
         setContentView(R.layout.activity_main)
-
-
     }
 
     fun add_marker(view: View) {

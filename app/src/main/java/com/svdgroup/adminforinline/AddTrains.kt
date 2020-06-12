@@ -8,8 +8,6 @@ class AddTrains {
     var description = ""
     var link_video = ""
 
-    constructor()
-
     constructor(id: String, name: String, link_picture: String, complexity: String, description: String, link_video: String) {
         this.id = id
         this.name = name

@@ -23,7 +23,7 @@ class MarkersActivity : AppCompatActivity() {
 
         var spinner: Spinner? = null
         val sentData = findViewById<Button>(R.id.buttonSetData)
-        val editLat = findViewById<EditText>(R.id.editText_group)
+        val editLat = findViewById<EditText>(R.id.editText_Lat)
         val editLon = findViewById<EditText>(R.id.editText_lon)
         val editName = findViewById<EditText>(R.id.editText_name)
         val editOpt = findViewById<EditText>(R.id.editText_opt)

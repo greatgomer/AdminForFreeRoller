@@ -7,8 +7,6 @@ class AddData {
     var name = ""
     var options = ""
 
-    constructor()
-
     constructor(id: String, lat: String, lon: String, name: String, options: String) {
         this.id = id
         this.lat = lat

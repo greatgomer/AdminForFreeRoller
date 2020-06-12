@@ -12,20 +12,21 @@
         android:id="@+id/spinner_city"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="216dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText_group"
+        android:id="@+id/editText_Lat"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:autofillHints="no"
         android:hint="@string/add_lat"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_city"
         tools:layout_conversion_absoluteHeight="146dp"
@@ -39,8 +40,9 @@
         android:hint="@string/add_lon"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_group"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Lat"
         tools:layout_conversion_absoluteHeight="146dp"
         tools:layout_conversion_absoluteWidth="411dp" />
 
