@@ -6,14 +6,16 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
+import androidx.lifecycle.Observer
 import com.google.firebase.database.DatabaseReference
 import kotlinx.android.synthetic.main.activity_markers.*
 
 class MarkersActivity : AppCompatActivity() {
 
     private lateinit var database: DatabaseReference
-    private var places_name = "Places"
-    var city = ""
+    private val citiesTitle = "Cities"
+    private val linksTitle = "Markers"
+    var cityId = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,35 +29,36 @@ class MarkersActivity : AppCompatActivity() {
         val editLon = findViewById<EditText>(R.id.editText_lon)
         val editName = findViewById<EditText>(R.id.editText_name)
         val editOpt = findViewById<EditText>(R.id.editText_opt)
-        val cities = resources.getStringArray(R.array.cities)
 
+        val citiesList = CitiesList()
+        citiesList.getNames().observe(this, Observer { cities ->
+            val cityNames = cities.map { it.second }
         spinner = this.spinner_city
 
-        val aa = ArrayAdapter(this, android.R.layout.simple_spinner_item, cities)
+        val aa = ArrayAdapter(this, android.R.layout.simple_spinner_item, cityNames)
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner!!.adapter = aa
 
-
-        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        spinner!!.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                city = cities[position]
+                cityId = cities[position].first
             }
         }
+        })
 
-        database = AppDatabase.getDatabase()!!.getReference(places_name)
+        database = AppDatabase.getDatabase()!!.getReference(citiesTitle)
 
         sentData.setOnClickListener {
-            val id = database.key.toString()
             val lat = editLat.text.toString()
             val lon = editLon.text.toString()
             val name = editName.text.toString()
             val opt = editOpt.text.toString()
-            database = AppDatabase.getDatabase()!!.getReference(places_name).child(city)
-            if(lat.isNotEmpty() && lon.isNotEmpty() && name.isNotEmpty() && opt.isNotEmpty() && city.isNotEmpty()){
-                val addData = AddData(id, lat, lon, name, opt)
+            database = AppDatabase.getDatabase()!!.getReference(citiesTitle).child(cityId).child(linksTitle)
+            if(lat.isNotEmpty() && lon.isNotEmpty() && name.isNotEmpty() && opt.isNotEmpty()){
+                val addData = AddData(lat, lon, name, opt)
                 database.push().setValue(addData)
                 Toast.makeText(this, R.string.check_is_successfully, Toast.LENGTH_SHORT).show()
             }else{

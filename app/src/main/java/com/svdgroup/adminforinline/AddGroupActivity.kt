@@ -24,7 +24,6 @@ class AddGroupActivity : AppCompatActivity() {
 
         var spinner: Spinner? = null
         val editGroup = findViewById<EditText>(R.id.editText_group)
-        val sentData = findViewById<Button>(R.id.buttonSetData)
 
         val citiesList = CitiesList()
         citiesList.getNames().observe(this, Observer { cities ->
