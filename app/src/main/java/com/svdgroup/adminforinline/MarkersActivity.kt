@@ -15,7 +15,9 @@ class MarkersActivity : AppCompatActivity() {
     private lateinit var database: DatabaseReference
     private val citiesTitle = "Cities"
     private val linksTitle = "Markers"
+    private val markersNames = arrayOf("Points", "Shops")
     var cityId = ""
+    var markersName = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +26,7 @@ class MarkersActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         var spinner: Spinner? = null
+        var spinnerMarkers: Spinner? = null
         val sentData = findViewById<Button>(R.id.buttonSetData)
         val editLat = findViewById<EditText>(R.id.editText_Lat)
         val editLon = findViewById<EditText>(R.id.editText_lon)
@@ -49,6 +52,21 @@ class MarkersActivity : AppCompatActivity() {
         }
         })
 
+        spinnerMarkers = this.spinner_markers
+
+        val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, markersNames)
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerMarkers!!.adapter = arrayAdapter
+
+        spinnerMarkers!!.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                markersName = markersNames[position]
+            }
+        }
+
         database = AppDatabase.getDatabase()!!.getReference(citiesTitle)
 
         sentData.setOnClickListener {
@@ -56,7 +74,7 @@ class MarkersActivity : AppCompatActivity() {
             val lon = editLon.text.toString()
             val name = editName.text.toString()
             val opt = editOpt.text.toString()
-            database = AppDatabase.getDatabase()!!.getReference(citiesTitle).child(cityId).child(linksTitle)
+            database = AppDatabase.getDatabase()!!.getReference(citiesTitle).child(cityId).child(linksTitle).child(markersName)
             if(lat.isNotEmpty() && lon.isNotEmpty() && name.isNotEmpty() && opt.isNotEmpty()){
                 val addData = AddData(lat, lon, name, opt)
                 database.push().setValue(addData)

@@ -32,6 +32,6 @@ class CitiesList() {
             }
         }
         database.addListenerForSingleValueEvent(valueEventListener)
-        return citiesMutableLiveData;
+        return citiesMutableLiveData
     }
 }
